@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width: 680px;
+				margin: 50px auto;
+    			color: #858585;
+    			font-size: 17px;
+    			position: relative;
+			}
+			.box:after{
+				content: "Read the testimonial";
+			    position: absolute;
+			    top: calc(50% - 50px);
+			    left: calc(50% - 100px);
+			    background: #fff;
+			    box-shadow: 0 7px 24px rgba(0,0,0,0.15);
+			    border-radius: 50px;
+			    padding: 8px 21px;
+			    opacity: 0;
+			    transform: translateY(-10px) scale(1.025);
+			    transition: 1s cubic-bezier(0.35,1.69,0.35,0.81);
+			}
+			.box_img{
+    			line-height: 0;
+			    background: #e8e8e8;
+			    padding-top: 20px;
+			    border-radius: 5px;
+			    box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+			    transition: 1s cubic-bezier(0.35,1.69,0.35,0.81);
+			    cursor: pointer;
+			}
+			.box_img:before{
+				content: "...";
+    			position: absolute;
+    			font-size: 45px;
+    			color: #fff;
+    			top: -4px;
+    			letter-spacing: -2px;
+    			left: 4px;
+			}
+			.box_img:after{
+				content: "";
+			    position: absolute;
+			    top: 20px;
+			    left: 0;
+			    right: 0;
+			    bottom: -1px;
+			    width: 100%;
+			    border-radius: 0 0 3px 3px;
+			    background: linear-gradient(135deg,rgba(255,255,255,1) 0,rgba(255,255,255,0) 100%);
+			    transition: 1s cubic-bezier(0.35,1.69,0.35,0.81);
+				opacity: 0;
+			}
+			.box_img img{
+    			width: 100%;
+    			display: inline-block;
+    			border: 0;
+    			margin: 0;
+    			padding: 0;
+				margin-bottom: -1px;
+    			border-radius: 0 0 3px 3px;
+			}
+			.box:hover:after {
+    			opacity: 1;
+    			transform: translateY(0) scale(1);
+			}
+			.box:hover .box_img{
+				box-shadow: 13px 22px 34px rgba(0,0,0,0.4);
+    			transform: translateY(-10px) scale(1.025);
+			}
+			.box:hover .box_img:after {
+    			opacity: .5;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box_img">
+				<img src="weadventure.jpg" />
+			</div>
+		</div>
+	</body>
+</html>
